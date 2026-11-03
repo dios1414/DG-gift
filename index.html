@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#170d19">
+  <title>DG Gift | Regalos digitales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">DG</span><span>DG <b>GIFT</b><small>REGALOS QUE SE SIENTEN</small></span></a>
+    <a class="top-link" href="#crear">Crear regalo <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">UN DETALLE QUE QUEDA PARA SIEMPRE</p>
+        <h1>Convertí tus recuerdos<br>en un regalo <em>inolvidable.</em></h1>
+        <p class="intro">Creá una experiencia digital con fotos, palabras especiales, música y una sorpresa. Compartila con un enlace o un código QR.</p>
+        <a class="primary-btn" href="#crear">Crear mi regalo <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-label="Vista ilustrativa de un regalo digital">
+        <div class="glow"></div><div class="photo-card"><div class="photo-placeholder">♡</div><span>Un recuerdo especial</span><small>PARA ALGUIEN ÚNICO</small></div>
+        <div class="floating-note">Hecho con amor ✦</div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article><span>▧</span><h3>Fotos y recuerdos</h3><p>Reuní tus momentos favoritos en una galería.</p></article>
+      <article><span>✉</span><h3>Cartas especiales</h3><p>Escribí un mensaje personal y emotivo.</p></article>
+      <article><span>♫</span><h3>Música</h3><p>Sumá una canción mediante un enlace.</p></article>
+      <article><span>♡</span><h3>Sobre sorpresa</h3><p>Guardá un mensaje para revelar al abrir.</p></article>
+    </section>
+
+    <section class="builder" id="crear">
+      <div class="section-heading"><p class="eyebrow">EMPEZÁ POR ACÁ</p><h2>Creá tu regalo</h2><p>Completá los datos y mirá una vista previa. Al final podrás descargar una página HTML lista para compartir.</p></div>
+      <div class="builder-grid">
+        <form id="giftForm" class="editor">
+          <label>Nombre de quien recibe<input id="recipient" maxlength="60" placeholder="Ej. Tamy" value="Alguien especial"></label>
+          <label>Ocasión<select id="occasion"><option>Aniversario</option><option>Cumpleaños</option><option>San Valentín</option><option>Amistad</option><option>Otro momento especial</option></select></label>
+          <label>Título del regalo<input id="title" maxlength="90" placeholder="Ej. Nuestra historia" value="Un regalo para vos"></label>
+          <label>Tu mensaje<textarea id="message" rows="5" maxlength="1800" placeholder="Escribí algo lindo...">Hay recuerdos que merecen un lugar especial. Gracias por ser parte de mi historia.</textarea></label>
+          <label>Fotos (podés elegir varias)<input id="photos" type="file" accept="image/*" multiple></label>
+          <p class="hint">Consejo: elegí fotos livianas para que el regalo sea fácil de compartir.</p>
+          <label>Enlace de música (opcional)<input id="music" type="url" placeholder="https://..."></label>
+          <label>Mensaje sorpresa<textarea id="surprise" rows="3" maxlength="700" placeholder="Un mensaje para descubrir...">¡Sos una persona muy especial para mí!</textarea></label>
+          <button class="primary-btn full" type="submit">Actualizar vista previa <span>→</span></button>
+        </form>
+
+        <aside class="preview-wrap">
+          <div class="preview-label">VISTA PREVIA</div>
+          <div class="gift-preview" id="preview">
+            <div class="preview-heart">♡</div><p class="preview-kicker" id="pOccasion">ANIVERSARIO</p>
+            <h3 id="pTitle">Un regalo para vos</h3><p class="to">Para <b id="pRecipient">Alguien especial</b></p>
+            <div class="preview-photos" id="photoPreview"><span>♡</span><span>♡</span><span>♡</span></div>
+            <p class="preview-message" id="pMessage">Hay recuerdos que merecen un lugar especial. Gracias por ser parte de mi historia.</p>
+            <button type="button" class="envelope" id="openSurprise">✉ Abrir sobre sorpresa</button>
+            <p class="surprise-text" id="pSurprise" hidden>¡Sos una persona muy especial para mí!</p>
+            <small class="preview-footer">CREADO CON ♥ EN DG GIFT</small>
+          </div>
+          <button type="button" id="downloadGift" class="secondary-btn full">Descargar mi regalo HTML</button>
+          <p class="hint">El archivo descargado es la página del regalo. Subilo a un hosting para obtener un enlace público y crear tu QR.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer><span class="brand-mark">DG</span><p>DG Gift · Un detalle, mil emociones.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
