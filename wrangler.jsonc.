@@ -1,0 +1,21 @@
+
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dg-gift",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-03",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*",
+      "/g/*"
+    ]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "GIFTS",
+      "id": "9db0dce9ac6b4542a71e34489cff86ee"
+    }
+  ]
+}
